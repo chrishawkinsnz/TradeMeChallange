@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)"
+options: "c5b89269a47eddbbd4c02c041e75b62f962db9d75beb4e740052acfec6e812b8"
+build_start_time: [1666780698, 921368122]
+build_end_time: [1666780699, 704741954]
+inputs:
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/List/ListResponse.swift": [1643091914, 827663421]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/List/ListView.swift": [1666779985, 745140552]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/List/ListViewModel.swift": [1666780367, 328525543]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/Network/DataFetcher.swift": [1666778448, 341325759]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/Network/EndPoints.swift": [1666778448, 332983493]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/Resouces/Color+Custom.swift": [1642738434, 50658464]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/Resouces/Image+Icons.swift": [1666780698, 693824291]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/Resouces/String+Localized.swift": [1643091847, 808656692]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/TabView/TradeMeTabView.swift": [1666780698, 704630613]
+  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/TradeMeChallangeApp.swift": [1666779861, 242267608]

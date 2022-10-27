@@ -1,0 +1,12 @@
+{
+  "source": "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hello, world!"
+      }
+    ]
+  },
+  "version": 1
+}
