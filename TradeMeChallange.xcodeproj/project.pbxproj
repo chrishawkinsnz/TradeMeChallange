@@ -24,6 +24,8 @@
 		359A4EAC290A966B001A37E6 /* ListingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EA9290A966B001A37E6 /* ListingsResponse.swift */; };
 		359A4EAD290A966B001A37E6 /* ListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EAA290A966B001A37E6 /* ListingsViewModel.swift */; };
 		359A4EAF290A988E001A37E6 /* ListingComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EAE290A988E001A37E6 /* ListingComponentView.swift */; };
+		359A4EB2290A9B32001A37E6 /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EB1290A9B32001A37E6 /* WatchListView.swift */; };
+		359A4EB5290A9B7E001A37E6 /* MyTradeMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EB4290A9B7E001A37E6 /* MyTradeMeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		359A4EA9290A966B001A37E6 /* ListingsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsResponse.swift; sourceTree = "<group>"; };
 		359A4EAA290A966B001A37E6 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
 		359A4EAE290A988E001A37E6 /* ListingComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingComponentView.swift; sourceTree = "<group>"; };
+		359A4EB1290A9B32001A37E6 /* WatchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
+		359A4EB4290A9B7E001A37E6 /* MyTradeMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTradeMeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		351F57572909358C00CEB911 /* TradeMeChallange */ = {
 			isa = PBXGroup;
 			children = (
+				359A4EB3290A9B68001A37E6 /* TradeMeView */,
+				359A4EB0290A9B0F001A37E6 /* WatchList */,
 				351F5783290A8EEC00CEB911 /* Components */,
 				351F57802909449B00CEB911 /* TabView */,
 				359A4EA7290A966B001A37E6 /* Listings */,
@@ -146,6 +152,22 @@
 			name = Listings;
 			path = TradeMeChallange/Listings;
 			sourceTree = SOURCE_ROOT;
+		};
+		359A4EB0290A9B0F001A37E6 /* WatchList */ = {
+			isa = PBXGroup;
+			children = (
+				359A4EB1290A9B32001A37E6 /* WatchListView.swift */,
+			);
+			path = WatchList;
+			sourceTree = "<group>";
+		};
+		359A4EB3290A9B68001A37E6 /* TradeMeView */ = {
+			isa = PBXGroup;
+			children = (
+				359A4EB4290A9B7E001A37E6 /* MyTradeMeView.swift */,
+			);
+			path = TradeMeView;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -221,6 +243,7 @@
 			files = (
 				351F5786290A8EFF00CEB911 /* PricesView.swift in Sources */,
 				359A4EAB290A966B001A37E6 /* ListingsView.swift in Sources */,
+				359A4EB2290A9B32001A37E6 /* WatchListView.swift in Sources */,
 				359A4EAC290A966B001A37E6 /* ListingsResponse.swift in Sources */,
 				359A4EAD290A966B001A37E6 /* ListingsViewModel.swift in Sources */,
 				351F5787290A8EFF00CEB911 /* VerticalTextView.swift in Sources */,
@@ -231,6 +254,7 @@
 				359A4EAF290A988E001A37E6 /* ListingComponentView.swift in Sources */,
 				351F57592909358C00CEB911 /* TradeMeChallangeApp.swift in Sources */,
 				351F576A290936F700CEB911 /* EndPoints.swift in Sources */,
+				359A4EB5290A9B7E001A37E6 /* MyTradeMeView.swift in Sources */,
 				351F5782290944BF00CEB911 /* TradeMeTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
