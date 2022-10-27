@@ -25,7 +25,7 @@ struct TradeMeTabView: View {
             
             
             NavigationView {
-                Text("lol")
+                WatchListView()
             }
             .tabItem {
                 VStack {
@@ -39,7 +39,7 @@ struct TradeMeTabView: View {
             
             
             NavigationView {
-                Text("lol")
+                MyTradeMeView()
             }
             .tabItem {
                 VStack {
