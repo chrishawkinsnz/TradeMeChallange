@@ -26,14 +26,13 @@
 		359A4EAF290A988E001A37E6 /* ListingComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EAE290A988E001A37E6 /* ListingComponentView.swift */; };
 		359A4EB2290A9B32001A37E6 /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EB1290A9B32001A37E6 /* WatchListView.swift */; };
 		359A4EB5290A9B7E001A37E6 /* MyTradeMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EB4290A9B7E001A37E6 /* MyTradeMeView.swift */; };
-		35A9228F290B1AB3004F6C81 /* TradeMeChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9228E290B1AB3004F6C81 /* TradeMeChallangeTests.swift */; };
-		35A9229C290B1ABC004F6C81 /* TradeMeChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9229B290B1ABC004F6C81 /* TradeMeChallangeUITests.swift */; };
-		35A9229E290B1ABC004F6C81 /* TradeMeChallangeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9229D290B1ABC004F6C81 /* TradeMeChallangeUITestsLaunchTests.swift */; };
 		35A922A5290B1ADC004F6C81 /* ListingsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A922A4290B1ADC004F6C81 /* ListingsUnitTests.swift */; };
 		35A922A8290B1B27004F6C81 /* MockDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A922A7290B1B27004F6C81 /* MockDataFetcher.swift */; };
 		35A922AB290B26B7004F6C81 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 35A922AA290B26B7004F6C81 /* Lottie */; };
 		35A922AE290B2777004F6C81 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A922AD290B2777004F6C81 /* LottieView.swift */; };
 		35A922B1290B27C0004F6C81 /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 35A922B0290B27C0004F6C81 /* loading-animation.json */; };
+		35A922B3290B2F33004F6C81 /* ListingsViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A922B2290B2F33004F6C81 /* ListingsViewUITest.swift */; };
+		35A922B6290B3959004F6C81 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A922B5290B3959004F6C81 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,14 +74,13 @@
 		359A4EB1290A9B32001A37E6 /* WatchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
 		359A4EB4290A9B7E001A37E6 /* MyTradeMeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTradeMeView.swift; sourceTree = "<group>"; };
 		35A9228C290B1AB3004F6C81 /* TradeMeChallangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeChallangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35A9228E290B1AB3004F6C81 /* TradeMeChallangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeChallangeTests.swift; sourceTree = "<group>"; };
 		35A92299290B1ABC004F6C81 /* TradeMeChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMeChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35A9229B290B1ABC004F6C81 /* TradeMeChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeChallangeUITests.swift; sourceTree = "<group>"; };
-		35A9229D290B1ABC004F6C81 /* TradeMeChallangeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeChallangeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35A922A4290B1ADC004F6C81 /* ListingsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsUnitTests.swift; sourceTree = "<group>"; };
 		35A922A7290B1B27004F6C81 /* MockDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataFetcher.swift; sourceTree = "<group>"; };
 		35A922AD290B2777004F6C81 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		35A922B0290B27C0004F6C81 /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
+		35A922B2290B2F33004F6C81 /* ListingsViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsViewUITest.swift; sourceTree = "<group>"; };
+		35A922B5290B3959004F6C81 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				351F57572909358C00CEB911 /* TradeMeChallange */,
-				35A9228D290B1AB3004F6C81 /* TradeMeChallangeTests */,
-				35A9229A290B1ABC004F6C81 /* TradeMeChallangeUITests */,
 				351F57562909358C00CEB911 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +130,7 @@
 		351F57572909358C00CEB911 /* TradeMeChallange */ = {
 			isa = PBXGroup;
 			children = (
+				35A922B4290B3932004F6C81 /* Notifications */,
 				35A922AC290B2763004F6C81 /* Lottie */,
 				359A4EB3290A9B68001A37E6 /* TradeMeView */,
 				359A4EB0290A9B0F001A37E6 /* WatchList */,
@@ -225,28 +222,12 @@
 			path = TradeMeView;
 			sourceTree = "<group>";
 		};
-		35A9228D290B1AB3004F6C81 /* TradeMeChallangeTests */ = {
-			isa = PBXGroup;
-			children = (
-				35A9228E290B1AB3004F6C81 /* TradeMeChallangeTests.swift */,
-			);
-			path = TradeMeChallangeTests;
-			sourceTree = "<group>";
-		};
-		35A9229A290B1ABC004F6C81 /* TradeMeChallangeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				35A9229B290B1ABC004F6C81 /* TradeMeChallangeUITests.swift */,
-				35A9229D290B1ABC004F6C81 /* TradeMeChallangeUITestsLaunchTests.swift */,
-			);
-			path = TradeMeChallangeUITests;
-			sourceTree = "<group>";
-		};
 		35A922A6290B1AF1004F6C81 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				35A922A4290B1ADC004F6C81 /* ListingsUnitTests.swift */,
 				35A922A7290B1B27004F6C81 /* MockDataFetcher.swift */,
+				35A922B2290B2F33004F6C81 /* ListingsViewUITest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -265,6 +246,14 @@
 				35A922B0290B27C0004F6C81 /* loading-animation.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		35A922B4290B3932004F6C81 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				35A922B5290B3959004F6C81 /* NotificationsView.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A922B6290B3959004F6C81 /* NotificationsView.swift in Sources */,
 				351F5786290A8EFF00CEB911 /* PricesView.swift in Sources */,
 				359A4EAB290A966B001A37E6 /* ListingsView.swift in Sources */,
 				359A4EB2290A9B32001A37E6 /* WatchListView.swift in Sources */,
@@ -431,7 +421,6 @@
 			files = (
 				35A922A8290B1B27004F6C81 /* MockDataFetcher.swift in Sources */,
 				35A922A5290B1ADC004F6C81 /* ListingsUnitTests.swift in Sources */,
-				35A9228F290B1AB3004F6C81 /* TradeMeChallangeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A9229C290B1ABC004F6C81 /* TradeMeChallangeUITests.swift in Sources */,
-				35A9229E290B1ABC004F6C81 /* TradeMeChallangeUITestsLaunchTests.swift in Sources */,
+				35A922B3290B2F33004F6C81 /* ListingsViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

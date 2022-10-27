@@ -17,7 +17,7 @@ struct ListingsView: View {
                         await viewModel.fetchListings()
                     }
                 }
-                .navigationBarTitle(Text("LatestListings"))
+                .navigationBarTitle(Text("Browse"))
                 .toolbar {
                     toolBar
                 }
@@ -30,12 +30,13 @@ struct ListingsView: View {
                 LazyVStack(alignment: .leading, spacing: 10) {
                     ForEach(viewModel.list) { item in
                         ListingComponentView(model: ListComponentViewModel(buttonAction: { viewModel.showAlert(type: .custom(title: "TappedOn", message: item.title)) }, item: item))
+                            .accessibilityIdentifier("item\(viewModel.list.firstIndex(where: { $0.id == item.id})!)")
                     }
                 }
                 .padding(.horizontal, 16)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .navigationBarTitle(Text("LatestListings"))
+            .navigationBarTitle(Text("Browse"))
             .toolbar {
                 toolBar
             }
@@ -56,6 +57,7 @@ struct ListingsView: View {
                     .renderingMode(.template)
                     .foregroundColor(.tasman)
             }
+            .accessibilityIdentifier("cart")
             
             Button(action: {
                 viewModel.showAlert(type: .search)
@@ -64,6 +66,7 @@ struct ListingsView: View {
                     .renderingMode(.template)
                     .foregroundColor(.tasman)
             }
+            .accessibilityIdentifier("search")
         }
     }
 }

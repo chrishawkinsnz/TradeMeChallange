@@ -6,7 +6,8 @@
   
 */
 "MyTradeMe" = "My Trade Me";
-"LatestListings" = "Browse";
+"Browse" = "Browse";
+"Discover" = "Discover";
 "Watchlist" = "Watchlist";
 "PriceNotAvailable" = "price not available";
 "ReserveMet" = "reserve met";
@@ -21,3 +22,4 @@
 "ErrorMessage" = "We were unable to fetch the listings";
 "InvalidUrlTitle" = "Invalid Url";
 "InvalidUrlMessage" = "The Url you are trying to call in not valid";
+"Notifications" = "Notifications";
