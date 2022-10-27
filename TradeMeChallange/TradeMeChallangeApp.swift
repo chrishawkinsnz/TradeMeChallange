@@ -11,7 +11,7 @@ import SwiftUI
 struct TradeMeChallangeApp: App {
     var body: some Scene {
         WindowGroup {
-            ListView()
+            TradeMeTabView()
         }
     }
 }

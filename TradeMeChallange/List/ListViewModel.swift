@@ -6,19 +6,23 @@
 //
 
 import Foundation
-@MainActor
+
+struct AlertContent {
+    let title: String
+    let message: String
+}
+
 class ListViewModel: ObservableObject {
     let dataFetcher: DataFetcherProtocol
     @Published var list: [ListResponse.ListItem] = []
+    @Published var shouldShowAlert: Bool = false
+    var alertContent: AlertContent?
     
     init(dataFetcher: DataFetcherProtocol = DataFetcher.defaultDataFetcher) {
         self.dataFetcher = dataFetcher
-        Task {
-            self.list = await fetchData()?.list ?? []
-        }
     }
     
-    private func fetchData() async -> ListResponse? {
+    func fetchListings() async {
         do {
             let request = DataFetcherRequest(
                 url: .latestListings,
@@ -29,9 +33,18 @@ class ListViewModel: ObservableObject {
             )
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            return try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
+            let response: ListResponse = try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
+            
+            await MainActor.run {
+                self.list = response.list ?? []
+            }
         } catch {
-            return nil
+            print(error)
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        self.alertContent = AlertContent(title: title, message: message)
+        self.shouldShowAlert = true
     }
 }

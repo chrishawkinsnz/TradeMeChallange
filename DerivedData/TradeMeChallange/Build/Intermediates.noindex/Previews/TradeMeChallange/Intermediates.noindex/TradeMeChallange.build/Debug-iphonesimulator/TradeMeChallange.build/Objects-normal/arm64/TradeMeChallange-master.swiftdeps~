@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.2 clang-1400.0.29.51)"
-options: "c5b89269a47eddbbd4c02c041e75b62f962db9d75beb4e740052acfec6e812b8"
-build_start_time: [1666776592, 143877029]
-build_end_time: [1666776592, 202368021]
-inputs:
-  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/ContentView.swift": !private [1666776588, 813127040]
-  "/Users/intialbuquerque/projects/TradeMeChallange/TradeMeChallange/TradeMeChallangeApp.swift": !private [1666776588, 809722423]
