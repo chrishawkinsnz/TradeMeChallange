@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-TradeMeChallange in TradeMeChallange, no dependencies
-TradeMeChallange in TradeMeChallange, no dependencies
