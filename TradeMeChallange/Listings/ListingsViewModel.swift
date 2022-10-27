@@ -1,5 +1,5 @@
 //
-//  ListViewModel.swift
+//  ListingsViewModel.swift
 //  TradeMeChallange
 //
 //  Created by Inti Albuquerque on 26/10/22.
@@ -12,9 +12,9 @@ struct AlertContent {
     let message: String
 }
 
-class ListViewModel: ObservableObject {
+class ListingsViewModel: ObservableObject {
     let dataFetcher: DataFetcherProtocol
-    @Published var list: [ListResponse.ListItem] = []
+    @Published var list: [ListingsResponse.ListItem] = []
     @Published var shouldShowAlert: Bool = false
     private(set) var alertContent: AlertContent?
     
@@ -33,7 +33,7 @@ class ListViewModel: ObservableObject {
             )
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let response: ListResponse = try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
+            let response: ListingsResponse = try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
             
             await MainActor.run {
                 self.list = response.list ?? []

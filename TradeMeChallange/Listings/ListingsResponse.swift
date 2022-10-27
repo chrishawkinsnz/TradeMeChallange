@@ -1,5 +1,5 @@
 //
-//  ListResponse.swift
+//  ListingsResponse.swift
 //  TadeMe
 //
 //  Created by Inti Albuquerque on 21/01/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListResponse: Codable {
+struct ListingsResponse: Codable {
     
     struct ListItem: Codable, Identifiable {
         let title: String

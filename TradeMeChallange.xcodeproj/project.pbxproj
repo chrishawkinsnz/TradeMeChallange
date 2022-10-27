@@ -17,12 +17,13 @@
 		351F577629093B9200CEB911 /* Image+Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577329093B9200CEB911 /* Image+Icons.swift */; };
 		351F577729093B9200CEB911 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577429093B9200CEB911 /* String+Localized.swift */; };
 		351F577829093B9200CEB911 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577529093B9200CEB911 /* Color+Custom.swift */; };
-		351F577B29093CEA00CEB911 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577A29093CEA00CEB911 /* ListViewModel.swift */; };
-		351F577D29093CF800CEB911 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577C29093CF800CEB911 /* ListView.swift */; };
-		351F577F29093D6D00CEB911 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577E29093D6D00CEB911 /* ListResponse.swift */; };
 		351F5782290944BF00CEB911 /* TradeMeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F5781290944BF00CEB911 /* TradeMeTabView.swift */; };
 		351F5786290A8EFF00CEB911 /* PricesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F5784290A8EFF00CEB911 /* PricesView.swift */; };
 		351F5787290A8EFF00CEB911 /* VerticalTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F5785290A8EFF00CEB911 /* VerticalTextView.swift */; };
+		359A4EAB290A966B001A37E6 /* ListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EA8290A966B001A37E6 /* ListingsView.swift */; };
+		359A4EAC290A966B001A37E6 /* ListingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EA9290A966B001A37E6 /* ListingsResponse.swift */; };
+		359A4EAD290A966B001A37E6 /* ListingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EAA290A966B001A37E6 /* ListingsViewModel.swift */; };
+		359A4EAF290A988E001A37E6 /* ListingComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A4EAE290A988E001A37E6 /* ListingComponentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,12 +38,13 @@
 		351F577329093B9200CEB911 /* Image+Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Icons.swift"; sourceTree = "<group>"; };
 		351F577429093B9200CEB911 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		351F577529093B9200CEB911 /* Color+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
-		351F577A29093CEA00CEB911 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		351F577C29093CF800CEB911 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		351F577E29093D6D00CEB911 /* ListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		351F5781290944BF00CEB911 /* TradeMeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeTabView.swift; sourceTree = "<group>"; };
 		351F5784290A8EFF00CEB911 /* PricesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PricesView.swift; sourceTree = "<group>"; };
 		351F5785290A8EFF00CEB911 /* VerticalTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalTextView.swift; sourceTree = "<group>"; };
+		359A4EA8290A966B001A37E6 /* ListingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsView.swift; sourceTree = "<group>"; };
+		359A4EA9290A966B001A37E6 /* ListingsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsResponse.swift; sourceTree = "<group>"; };
+		359A4EAA290A966B001A37E6 /* ListingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingsViewModel.swift; sourceTree = "<group>"; };
+		359A4EAE290A988E001A37E6 /* ListingComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingComponentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,7 @@
 			children = (
 				351F5783290A8EEC00CEB911 /* Components */,
 				351F57802909449B00CEB911 /* TabView */,
-				351F577929093CCB00CEB911 /* List */,
+				359A4EA7290A966B001A37E6 /* Listings */,
 				351F576D29093B4100CEB911 /* Resouces */,
 				351F5766290935EB00CEB911 /* Network */,
 				351F57582909358C00CEB911 /* TradeMeChallangeApp.swift */,
@@ -116,16 +118,6 @@
 			path = Resouces;
 			sourceTree = "<group>";
 		};
-		351F577929093CCB00CEB911 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				351F577E29093D6D00CEB911 /* ListResponse.swift */,
-				351F577A29093CEA00CEB911 /* ListViewModel.swift */,
-				351F577C29093CF800CEB911 /* ListView.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
 		351F57802909449B00CEB911 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +131,21 @@
 			children = (
 				351F5784290A8EFF00CEB911 /* PricesView.swift */,
 				351F5785290A8EFF00CEB911 /* VerticalTextView.swift */,
+				359A4EAE290A988E001A37E6 /* ListingComponentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
+		};
+		359A4EA7290A966B001A37E6 /* Listings */ = {
+			isa = PBXGroup;
+			children = (
+				359A4EA8290A966B001A37E6 /* ListingsView.swift */,
+				359A4EA9290A966B001A37E6 /* ListingsResponse.swift */,
+				359A4EAA290A966B001A37E6 /* ListingsViewModel.swift */,
+			);
+			name = Listings;
+			path = TradeMeChallange/Listings;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -216,14 +220,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				351F5786290A8EFF00CEB911 /* PricesView.swift in Sources */,
-				351F577F29093D6D00CEB911 /* ListResponse.swift in Sources */,
-				351F577D29093CF800CEB911 /* ListView.swift in Sources */,
+				359A4EAB290A966B001A37E6 /* ListingsView.swift in Sources */,
+				359A4EAC290A966B001A37E6 /* ListingsResponse.swift in Sources */,
+				359A4EAD290A966B001A37E6 /* ListingsViewModel.swift in Sources */,
 				351F5787290A8EFF00CEB911 /* VerticalTextView.swift in Sources */,
 				351F577729093B9200CEB911 /* String+Localized.swift in Sources */,
 				351F577629093B9200CEB911 /* Image+Icons.swift in Sources */,
-				351F577B29093CEA00CEB911 /* ListViewModel.swift in Sources */,
 				351F577829093B9200CEB911 /* Color+Custom.swift in Sources */,
 				351F57682909360800CEB911 /* DataFetcher.swift in Sources */,
+				359A4EAF290A988E001A37E6 /* ListingComponentView.swift in Sources */,
 				351F57592909358C00CEB911 /* TradeMeChallangeApp.swift in Sources */,
 				351F576A290936F700CEB911 /* EndPoints.swift in Sources */,
 				351F5782290944BF00CEB911 /* TradeMeTabView.swift in Sources */,

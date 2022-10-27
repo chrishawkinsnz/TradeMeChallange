@@ -11,7 +11,7 @@ struct TradeMeTabView: View {
     var body: some View {
         TabView {
             NavigationView {
-                ListView()
+                ListingsView()
             }
             .tabItem {
                 VStack {
