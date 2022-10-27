@@ -12,11 +12,29 @@ struct AlertContent {
     let message: String
 }
 
+enum ListingsViewAlertTypes {
+    case error, cart, search, custom(title: String, message: String)
+    
+    func createAlertContent() -> AlertContent {
+        switch self {
+        case .error:
+            return AlertContent(title: "ErrorTitle", message: "ErrorMessage")
+        case .cart:
+            return AlertContent(title: "CartTitle", message: "CartMessage")
+        case .search:
+            return AlertContent(title: "SearchTitle", message: "SearchMessage")
+        case .custom(let title, let message):
+            return AlertContent(title: title, message: message)
+        }
+    }
+}
+
 class ListingsViewModel: ObservableObject {
     let dataFetcher: DataFetcherProtocol
     @Published var list: [ListingsResponse.ListItem] = []
     @Published var shouldShowAlert: Bool = false
-    private(set) var alertContent: AlertContent?
+    @Published var showLoading: Bool = true
+    private(set) var alertContent: ListingsViewAlertTypes?
     
     init(dataFetcher: DataFetcherProtocol = DataFetcher.defaultDataFetcher) {
         self.dataFetcher = dataFetcher
@@ -24,6 +42,9 @@ class ListingsViewModel: ObservableObject {
     
     func fetchListings() async {
         do {
+            await MainActor.run {
+                self.showLoading = true
+            }
             let request = DataFetcherRequest(
                 endpoint: .latestListings(rows: "20"),
                 headers: [
@@ -37,14 +58,27 @@ class ListingsViewModel: ObservableObject {
             
             await MainActor.run {
                 self.list = response.list ?? []
+                self.showLoading = false
             }
         } catch {
-            print(error)
+            guard let error = error as? DataFetcherError else {
+                self.alertContent = .error
+                await MainActor.run {
+                    self.shouldShowAlert = true
+                    self.showLoading = false
+                }
+                return
+            }
+            self.alertContent = .custom(title: error.title, message: error.message)
+            await MainActor.run {
+                self.shouldShowAlert = true
+                self.showLoading = false
+            }
         }
     }
     
-    func showAlert(title: String, message: String) {
-        self.alertContent = AlertContent(title: title, message: message)
+    func showAlert(type: ListingsViewAlertTypes) {
+        self.alertContent = type
         self.shouldShowAlert = true
     }
 }

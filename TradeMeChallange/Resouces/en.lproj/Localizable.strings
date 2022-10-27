@@ -17,7 +17,7 @@
 "CartMessage" = "You tapped on the cart button";
 "SearchTitle" = "Search";
 "SearchMessage" = "You tapped on the Search button";
-"Error" = "Error";
-"ServerError" = "Server error";
+"ErrorTitle" = "Something went wrong";
+"ErrorMessage" = "We were unable to fetch the listings";
 "InvalidUrlTitle" = "Invalid Url";
 "InvalidUrlMessage" = "The Url you are trying to call in not valid";
