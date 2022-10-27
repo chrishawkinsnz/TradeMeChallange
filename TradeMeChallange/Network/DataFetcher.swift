@@ -45,18 +45,18 @@ extension Encodable {
 struct DataFetcherRequest {
     private static let authString = "OAuth oauth_consumer_key=\"A1AC63F0332A131A78FAC304D007E7D1\",oauth_signature_method=\"PLAINTEXT\",oauth_signature=\"EC7F18B17A062962C6930A8AE88B16C7&\""
     
-    let url: EndPoint
+    let endpoint: EndPoint
     private var headers: [String: String]
     private let body: Data?
     private let httpMethod: HTTPMethod
     
-    init(url: EndPoint,
+    init(endpoint: EndPoint,
          headers: [String: String]? = nil,
          reqBody: Encodable? = nil,
          httpMethod: HTTPMethod,
          encoder: EncoderProtocol = DataFetcherUtils.encoder
     ) {
-        self.url = url
+        self.endpoint = endpoint
         self.headers = headers ?? [:]
         self.body = reqBody?.encode(encoder: encoder)
         self.httpMethod = httpMethod
@@ -100,7 +100,7 @@ actor DataFetcher: DataFetcherProtocol {
             let sessionConfig = URLSessionConfiguration.default
             sessionConfig.timeoutIntervalForRequest = TimeInterval(requestTimeOut)
             
-            guard let url = URL(string: req.url.rawValue) else {
+            guard let url = req.endpoint.buildUrl() else {
                 throw DataFetcherError(
                     title: "InvalidUrlTitle".localized,
                     message: "InvalidUrlMessage".localized

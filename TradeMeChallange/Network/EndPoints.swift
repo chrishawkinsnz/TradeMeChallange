@@ -7,6 +7,14 @@
 
 import Foundation
 
-enum EndPoint: String {
-    case latestListings = "https://api.tmsandbox.co.nz/v1/listings/latest.json"
+enum EndPoint {
+    case latestListings(rows: String)
+    func buildUrl() -> URL? {
+        switch self {
+        case .latestListings(let rows):
+            var url = URL(string: "https://api.tmsandbox.co.nz/v1/listings/latest.json")
+            url?.append(queryItems: [URLQueryItem(name: "rows", value: rows)])
+            return url
+        }
+    }
 }

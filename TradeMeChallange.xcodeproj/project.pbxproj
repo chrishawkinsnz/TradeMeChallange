@@ -21,6 +21,8 @@
 		351F577D29093CF800CEB911 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577C29093CF800CEB911 /* ListView.swift */; };
 		351F577F29093D6D00CEB911 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F577E29093D6D00CEB911 /* ListResponse.swift */; };
 		351F5782290944BF00CEB911 /* TradeMeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F5781290944BF00CEB911 /* TradeMeTabView.swift */; };
+		351F5786290A8EFF00CEB911 /* PricesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F5784290A8EFF00CEB911 /* PricesView.swift */; };
+		351F5787290A8EFF00CEB911 /* VerticalTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351F5785290A8EFF00CEB911 /* VerticalTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		351F577C29093CF800CEB911 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		351F577E29093D6D00CEB911 /* ListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		351F5781290944BF00CEB911 /* TradeMeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMeTabView.swift; sourceTree = "<group>"; };
+		351F5784290A8EFF00CEB911 /* PricesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PricesView.swift; sourceTree = "<group>"; };
+		351F5785290A8EFF00CEB911 /* VerticalTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		351F57572909358C00CEB911 /* TradeMeChallange */ = {
 			isa = PBXGroup;
 			children = (
+				351F5783290A8EEC00CEB911 /* Components */,
 				351F57802909449B00CEB911 /* TabView */,
 				351F577929093CCB00CEB911 /* List */,
 				351F576D29093B4100CEB911 /* Resouces */,
@@ -127,6 +132,15 @@
 				351F5781290944BF00CEB911 /* TradeMeTabView.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		351F5783290A8EEC00CEB911 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				351F5784290A8EFF00CEB911 /* PricesView.swift */,
+				351F5785290A8EFF00CEB911 /* VerticalTextView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351F5786290A8EFF00CEB911 /* PricesView.swift in Sources */,
 				351F577F29093D6D00CEB911 /* ListResponse.swift in Sources */,
 				351F577D29093CF800CEB911 /* ListView.swift in Sources */,
+				351F5787290A8EFF00CEB911 /* VerticalTextView.swift in Sources */,
 				351F577729093B9200CEB911 /* String+Localized.swift in Sources */,
 				351F577629093B9200CEB911 /* Image+Icons.swift in Sources */,
 				351F577B29093CEA00CEB911 /* ListViewModel.swift in Sources */,

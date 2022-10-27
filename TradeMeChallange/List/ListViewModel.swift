@@ -16,7 +16,7 @@ class ListViewModel: ObservableObject {
     let dataFetcher: DataFetcherProtocol
     @Published var list: [ListResponse.ListItem] = []
     @Published var shouldShowAlert: Bool = false
-    var alertContent: AlertContent?
+    private(set) var alertContent: AlertContent?
     
     init(dataFetcher: DataFetcherProtocol = DataFetcher.defaultDataFetcher) {
         self.dataFetcher = dataFetcher
@@ -25,7 +25,7 @@ class ListViewModel: ObservableObject {
     func fetchListings() async {
         do {
             let request = DataFetcherRequest(
-                url: .latestListings,
+                endpoint: .latestListings(rows: "20"),
                 headers: [
                     "Content-Type": "application/x-www-form-urlencoded",
                     "rows": "20"],
