@@ -87,7 +87,7 @@ actor DataFetcher: DataFetcherProtocol {
     
     static let defaultDataFetcher = DataFetcher()
     
-    let requestTimeOut: Float
+    internal let requestTimeOut: Float
     
     init(requestTimeOut: Float = 30) {
         self.requestTimeOut = requestTimeOut
