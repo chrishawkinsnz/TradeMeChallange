@@ -10,27 +10,40 @@ import SwiftUI
 struct ListingsView: View {
     @StateObject var viewModel = ListingsViewModel()
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading, spacing: 10) {
-                ForEach(viewModel.list) { item in
-                    ListingComponentView(model: ListComponentViewModel(buttonAction: { viewModel.showAlert(title: "TappedOn", message: item.title) }, item: item))
+        if viewModel.showLoading {
+            LottieView(name: .loading)
+                .onAppear {
+                    Task {
+                        await viewModel.fetchListings()
+                    }
                 }
+                .navigationBarTitle(Text("Browse"))
+                .toolbar {
+                    toolBar
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .alert(isPresented: $viewModel.shouldShowAlert) {
+                    Alert(title: Text(viewModel.alertContent?.createAlertContent().title.localized ?? ""), message: Text(viewModel.alertContent?.createAlertContent().message.localized ?? ""))
+                }
+        } else {
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 10) {
+                    ForEach(viewModel.list) { item in
+                        ListingComponentView(model: ListComponentViewModel(buttonAction: { viewModel.showAlert(type: .custom(title: "TappedOn", message: item.title)) }, item: item))
+                            .accessibilityIdentifier("item\(viewModel.list.firstIndex(where: { $0.id == item.id})!)")
+                    }
+                }
+                .padding(.horizontal, 16)
             }
-            .padding(.horizontal, 16)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear {
-            Task {
-                await viewModel.fetchListings()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationBarTitle(Text("Browse"))
+            .toolbar {
+                toolBar
             }
-        }
-        .navigationBarTitle(Text("LatestListings"))
-        .toolbar {
-            toolBar
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .alert(isPresented: $viewModel.shouldShowAlert) {
-            Alert(title: Text(viewModel.alertContent?.title.localized ?? ""), message: Text(viewModel.alertContent?.message.localized ?? ""))
+            .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $viewModel.shouldShowAlert) {
+                Alert(title: Text(viewModel.alertContent?.createAlertContent().title.localized ?? ""), message: Text(viewModel.alertContent?.createAlertContent().message.localized ?? ""))
+            }
         }
     }
     
@@ -38,20 +51,22 @@ struct ListingsView: View {
     var toolBar: some View {
         HStack {
             Button(action: {
-                viewModel.showAlert(title: "CartTitle", message: "CartMessage")
+                viewModel.showAlert(type: .cart)
             }) {
                 Image(iconName: .cart)
                     .renderingMode(.template)
                     .foregroundColor(.tasman)
             }
+            .accessibilityIdentifier("cart")
             
             Button(action: {
-                viewModel.showAlert(title: "SearchTitle", message: "SearchMessage")
+                viewModel.showAlert(type: .search)
             }) {
                 Image(iconName: .search)
                     .renderingMode(.template)
                     .foregroundColor(.tasman)
             }
+            .accessibilityIdentifier("search")
         }
     }
 }

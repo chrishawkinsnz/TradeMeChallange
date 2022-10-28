@@ -12,6 +12,7 @@ struct TradeMeTabView: View {
         TabView {
             NavigationView {
                 ListingsView()
+                    .accessibilityIdentifier("listings")
             }
             .tabItem {
                 VStack {
@@ -19,13 +20,28 @@ struct TradeMeTabView: View {
                         .renderingMode(.template)
                         .resizable()
                         .frame(width: 24, height: 24)
-                    Text("LatestListings")
+                    Text("Discover")
+                }
+            }
+            
+            NavigationView {
+                NotificationsView()
+                    .accessibilityIdentifier("notifications")
+            }
+            .tabItem {
+                VStack {
+                    Image(iconName: .watchlist)
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                    Text("Notifications")
                 }
             }
             
             
             NavigationView {
                 WatchListView()
+                    .accessibilityIdentifier("watch list")
             }
             .tabItem {
                 VStack {
@@ -40,6 +56,7 @@ struct TradeMeTabView: View {
             
             NavigationView {
                 MyTradeMeView()
+                    .accessibilityIdentifier("my trade me")
             }
             .tabItem {
                 VStack {
