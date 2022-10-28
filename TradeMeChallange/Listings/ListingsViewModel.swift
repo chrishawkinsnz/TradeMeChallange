@@ -31,7 +31,7 @@ enum ListingsViewAlertTypes {
 
 class ListingsViewModel: ObservableObject {
     let dataFetcher: DataFetcherProtocol
-    @Published var list: [ListingsResponse.ListItem] = []
+    @Published var listings: [ListingsResponse.ListItem] = []
     @Published var shouldShowAlert: Bool = false
     @Published var showLoading: Bool = true
     private(set) var alertContent: ListingsViewAlertTypes?
@@ -57,7 +57,7 @@ class ListingsViewModel: ObservableObject {
             let response: ListingsResponse = try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
             
             await MainActor.run {
-                self.list = response.list ?? []
+                self.listings = response.list ?? []
                 self.showLoading = false
             }
         } catch {

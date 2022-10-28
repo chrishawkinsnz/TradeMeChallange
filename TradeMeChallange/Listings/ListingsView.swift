@@ -28,9 +28,9 @@ struct ListingsView: View {
         } else {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 10) {
-                    ForEach(viewModel.list) { item in
+                    ForEach(viewModel.listings) { item in
                         ListingComponentView(model: ListComponentViewModel(buttonAction: { viewModel.showAlert(type: .custom(title: "TappedOn", message: item.title)) }, item: item))
-                            .accessibilityIdentifier("item\(viewModel.list.firstIndex(where: { $0.id == item.id})!)")
+                            .accessibilityIdentifier("item\(viewModel.listings.firstIndex(where: { $0.id == item.id})!)")
                     }
                 }
                 .padding(.horizontal, 16)

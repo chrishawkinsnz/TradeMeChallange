@@ -12,7 +12,6 @@ struct TradeMeTabView: View {
         TabView {
             NavigationView {
                 ListingsView()
-                    .accessibilityIdentifier("listings")
             }
             .tabItem {
                 VStack {
@@ -26,7 +25,6 @@ struct TradeMeTabView: View {
             
             NavigationView {
                 NotificationsView()
-                    .accessibilityIdentifier("notifications")
             }
             .tabItem {
                 VStack {
@@ -41,7 +39,6 @@ struct TradeMeTabView: View {
             
             NavigationView {
                 WatchListView()
-                    .accessibilityIdentifier("watch list")
             }
             .tabItem {
                 VStack {
@@ -56,7 +53,6 @@ struct TradeMeTabView: View {
             
             NavigationView {
                 MyTradeMeView()
-                    .accessibilityIdentifier("my trade me")
             }
             .tabItem {
                 VStack {

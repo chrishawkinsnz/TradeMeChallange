@@ -15,8 +15,8 @@ struct ListingsResponse: Codable {
         let pictureHref: String?
         let priceDisplay: String
         let buyNowPrice: Float?
-        let isClassified: Bool?
-        let isReserveMet: Bool?
+        let isClassified: Bool
+        let isReserveMet: Bool
         let id: Int
         
         init(title: String,
@@ -24,8 +24,8 @@ struct ListingsResponse: Codable {
              pictureHref: String?,
              priceDisplay: String,
              buyNowPrice: Float?,
-             isClassified: Bool?,
-             isReserveMet: Bool?,
+             isClassified: Bool,
+             isReserveMet: Bool,
              id: Int) {
             self.title = title
             self.region = region
@@ -62,8 +62,8 @@ struct ListingsResponse: Codable {
             let priceDispayed = try? values.decode(String?.self, forKey: .PriceDisplay) ?? nil
             self.priceDisplay = priceDispayed != nil ? "\(priceDispayed!)" : "PriceNotAvailable".localized
             self.buyNowPrice = try? values.decode(Float?.self, forKey: .BuyNowPrice) ?? nil
-            self.isClassified = try? values.decode(Bool?.self, forKey: .IsClassified) ?? nil
-            self.isReserveMet = try? values.decode(Bool?.self, forKey: .IsReserveMet) ?? nil
+            self.isClassified = (try? values.decode(Bool.self, forKey: .IsClassified)) ?? false
+            self.isReserveMet = (try? values.decode(Bool.self, forKey: .IsReserveMet)) ?? false
             
         }
         
