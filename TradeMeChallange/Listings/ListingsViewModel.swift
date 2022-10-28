@@ -31,9 +31,9 @@ enum ListingsViewAlertTypes {
 
 class ListingsViewModel: ObservableObject {
     let dataFetcher: DataFetcherProtocol
-    @Published var list: [ListingsResponse.ListItem] = []
+    @Published private(set) var listings: [ListingsResponse.ListItem] = []
     @Published var shouldShowAlert: Bool = false
-    @Published var showLoading: Bool = true
+    @Published private(set) var showLoading: Bool = true
     private(set) var alertContent: ListingsViewAlertTypes?
     
     init(dataFetcher: DataFetcherProtocol = DataFetcher.defaultDataFetcher) {
@@ -52,12 +52,10 @@ class ListingsViewModel: ObservableObject {
                     "rows": "20"],
                 httpMethod: .GET
             )
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
             let response: ListingsResponse = try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
             
             await MainActor.run {
-                self.list = response.list ?? []
+                self.listings = response.list ?? []
                 self.showLoading = false
             }
         } catch {

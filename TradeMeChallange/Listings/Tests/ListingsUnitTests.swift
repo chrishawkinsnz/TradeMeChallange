@@ -17,7 +17,7 @@ final class ListingsUnitTests: XCTestCase {
         fetcher.expectation = self.expectation(description: "waiting for listings")
         await viewModel.fetchListings()
         await waitForExpectations(timeout: 10)
-        XCTAssertEqual(viewModel.list[0].id, 1)
+        XCTAssertEqual(viewModel.listings[0].id, 1)
         XCTAssertFalse(viewModel.showLoading)
     }
     
@@ -29,7 +29,7 @@ final class ListingsUnitTests: XCTestCase {
         fetcher.expectation = self.expectation(description: "waiting for listings")
         await viewModel.fetchListings()
         await waitForExpectations(timeout: 10)
-        XCTAssertTrue(viewModel.list.isEmpty)
+        XCTAssertTrue(viewModel.listings.isEmpty)
         XCTAssertTrue(viewModel.shouldShowAlert)
         XCTAssertEqual(viewModel.alertContent?.createAlertContent().title, "test error title")
         XCTAssertFalse(viewModel.showLoading)
