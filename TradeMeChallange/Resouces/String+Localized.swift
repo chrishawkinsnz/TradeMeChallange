@@ -1,8 +1,8 @@
 //
 //  String+Localized.swift
-//  TadeMe
+//  TradeMeChallange
 //
-//  Created by Inti Albuquerque on 25/01/22.
+//  Created by Inti Albuquerque on 26/10/22.
 //
 
 import Foundation

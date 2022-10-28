@@ -1,8 +1,8 @@
 //
 //  PricesView.swift
-//  TadeMe
+//  TradeMeChallange
 //
-//  Created by Inti Albuquerque on 25/01/22.
+//  Created by Inti Albuquerque on 26/10/22.
 //
 
 import SwiftUI
@@ -13,20 +13,28 @@ struct PricesView: View {
     
     var body: some View {
         HStack {
-            if item.isClassified == true,  let buyNowPrice = item.buyNowPrice {
-                let titleModel = TextModel(text: "\(buyNowPrice)", font: .footnote, weight: .bold, color: .textDark)
+            if item.isClassified == true {
+                let titleModel = TextModel(text: "\(item.priceDisplay)", font: .footnote, weight: .bold, color: .textDark)
                 
-                let messageModel = TextModel(text: "BuyNow", font: .footnote, weight: .regular, color: .textLight)
+                let messageModel = TextModel(text: "Askingprice".localized, font: .footnote, weight: .regular, color: .textLight)
                 
                 VerticalTextView(titleModel: titleModel, messageModel: messageModel)
                 Spacer()
             } else {
                 let titleModel = TextModel(text: item.priceDisplay, font: .footnote, weight: .bold, color: .textDark)
                 
-                let messageModel = TextModel(text: item.isReserveMet == true ? "ReserveMet" : "ReserveNotMet", font: .footnote, weight: .regular, color: .textLight)
+                let messageModel = TextModel(text: item.isReserveMet == true ? "ReserveMet".localized : "ReserveNotMet".localized, font: .footnote, weight: .regular, color: .textLight)
                 
                 VerticalTextView(titleModel: titleModel, messageModel: messageModel)
                 Spacer()
+                if let buyNow = item.buyNowPrice {
+                    let titleModel = TextModel(text: "\(buyNow)", font: .footnote, weight: .bold, color: .textDark)
+                    
+                    let messageModel = TextModel(text: "BuyNow".localized, font: .footnote, weight: .regular, color: .textLight)
+                    
+                    VerticalTextView(titleModel: titleModel, messageModel: messageModel)
+                }
+
             }
         }
     }

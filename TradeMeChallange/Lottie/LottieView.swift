@@ -1,8 +1,8 @@
 //
 //  LottieView.swift
-//  Stamps
+//  TradeMeChallange
 //
-//  Created by Inti Albuquerque on 26/11/21.
+//  Created by Inti Albuquerque on 26/10/22.
 //
 
 import Foundation
