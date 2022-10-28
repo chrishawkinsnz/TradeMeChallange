@@ -48,8 +48,7 @@ class ListingsViewModel: ObservableObject {
             let request = DataFetcherRequest(
                 endpoint: .latestListings(rows: "20"),
                 headers: [
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "rows": "20"],
+                    "Content-Type": "application/x-www-form-urlencoded"],
                 httpMethod: .GET
             )
             let response: ListingsResponse = try await dataFetcher.request(request, decoder: DataFetcherUtils.defaultDecoder())
