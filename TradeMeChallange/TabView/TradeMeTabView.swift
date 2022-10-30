@@ -19,6 +19,8 @@ struct TradeMeTabView: View {
                         .renderingMode(.template)
                         .resizable()
                         .frame(width: 24, height: 24)
+                    // TODOJ why is this size setting required
+                    // TODOJ how can we check this is workign
                     Text("Discover")
                 }
             }

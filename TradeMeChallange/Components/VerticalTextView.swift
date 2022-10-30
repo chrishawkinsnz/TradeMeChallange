@@ -24,13 +24,13 @@ struct VerticalTextView: View {
                 .fontWeight(titleModel.weight)
                 .lineLimit(nil)
                 .multilineTextAlignment(.leading)
-            
+
             Text(messageModel.text)
                 .foregroundColor(messageModel.color)
                 .font(messageModel.font)
                 .fontWeight(messageModel.weight)
                 .lineLimit(nil)
-                .multilineTextAlignment(.leading)
+                .multilineTextAlignment(.leading) // TODOJ we repeat ourselves a little here, is this okay??
             
         }
     }

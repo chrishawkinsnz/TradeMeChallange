@@ -52,7 +52,8 @@ struct ListingComponentView: View {
                 .opacity(0.3)
                 .frame(height: 1)
                 .padding(.top, 2)
-            
+            // TODOJ is there a simpler way to do this?
+            // TODOJ god I wish our real search result cells were this clean.
         }
     }
 }

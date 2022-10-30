@@ -41,5 +41,8 @@ struct LottieView: UIViewRepresentable {
         return view
     }
     
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {}
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieView>) {
+        // TODOJ: will cells with a LottieView start from the begining on reuse?
+        // TODOJ: will setting pause on a LottieView stop the animation looping?
+    }
 }

@@ -16,6 +16,9 @@ struct ListingsView: View {
                     Task {
                         await viewModel.fetchListings()
                     }
+                    // TODOJ what is the difference between
+                    // .onAppear { Task {
+                    // .task {
                 }
                 .navigationBarTitle(Text("Browse"))
                 .toolbar {

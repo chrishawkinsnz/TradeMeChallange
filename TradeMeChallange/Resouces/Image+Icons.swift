@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 enum IconName: String {
     case profile, cart, search, watchlist, bell
+    // TODOJ neat!
 }
 
 extension Image {
